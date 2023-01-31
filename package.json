@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "start": "node server/index.js",
-    "build": "cd client && npm install && npm run build"
+    "build": "cd client && npm run build && rm -rf node_modules && npm install --only=production"
+
   },
   "repository": {
     "type": "git",
