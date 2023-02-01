@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "start": "node server/index.js",
-    "build": "npm run build"
   },
   "repository": {
     "type": "git",
