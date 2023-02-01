@@ -3,7 +3,7 @@ The Survey Application, is meant to mimick Google Forms by allowing users to cre
 
 ## Links
 
-Deployed App: <s>https://mini-surveymonkey.herokuapp.com/</s> Rip Heroku new link https://googleformsreplica.onrender.com/
+Deployed App: https://googleformsreplica.onrender.com/
 
 ### Process to test the project
 
