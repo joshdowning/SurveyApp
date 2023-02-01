@@ -1,9 +1,9 @@
-# Mini Survey Monkey
-The Mini Survey Application, is meant to mimick the Survey Monkey application by allowing users to create surveys, and have other users fill them out.
+# Survey App
+The Survey Application, is meant to mimick Google Forms by allowing users to create surveys, and have other users fill them out.
 
 ## Links
 
-Deployed App: https://mini-surveymonkey.herokuapp.com/ 
+Deployed App: <s>https://mini-surveymonkey.herokuapp.com/</s> Rip Heroku new link https://googleformsreplica.onrender.com/
 
 ### Process to test the project
 
