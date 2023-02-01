@@ -25,7 +25,7 @@ const SurveyViewer = () => {
 
       useEffect(() => {
           let user = sessionStorage.getItem("logged_in_user") 
-          axios.get("/surveys/" + user).then(response => {
+          axios.get("https://surveyapp-6nn5.onrender.com/surveys/" + user).then(response => {
             setSurveys(response.data.response.reverse());
             setLoading(false);
           });
@@ -44,7 +44,7 @@ const SurveyViewer = () => {
 
       const Search = () => {
          //configure endpoint info
-         let config = {method: 'get', url: '/search/' + searchTerm + "-" + value}
+         let config = {method: 'get', url: 'https://surveyapp-6nn5.onrender.com/search/' + searchTerm + "-" + value}
          console.log("term", searchTerm)
          console.log("value", value)
          let reply
