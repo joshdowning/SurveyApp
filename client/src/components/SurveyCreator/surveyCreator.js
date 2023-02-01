@@ -91,7 +91,7 @@ const SurveyCreator = () => {
         let user = sessionStorage.getItem("logged_in_user")
         let surveyObject = {id: idNum, questions: questionsArr, username: user, title: title, active:true, private: priv}
 
-        await axios.post("/addSurvey", surveyObject)
+        await axios.post("https://surveyapp-6nn5.onrender.com/addSurvey", surveyObject)
         document.location.href="/surveyconfirmation-created"
     }
 

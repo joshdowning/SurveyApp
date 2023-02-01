@@ -24,14 +24,14 @@ const Response = () => {
     }
 
     useEffect(() => {
-        axios.get("/responses").then(response => {
+        axios.get("https://surveyapp-6nn5.onrender.com/responses").then(response => {
           setSurveys(response.data.response);
           setLoading(false);
         });
       }, []);
 
       useEffect(() => {
-        let config = {method: 'get', url: '/search/' + id + "-id"}
+        let config = {method: 'get', url: 'https://surveyapp-6nn5.onrender.com/search/' + id + "-id"}
         let reply
         //call api amd save result to variable
         axios(config)

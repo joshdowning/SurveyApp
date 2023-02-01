@@ -48,7 +48,7 @@ const handleLogout = (event) =>
 }
 const Search = () => {
   //configure endpoint info
-  let config = {method: 'get', url: '/userexist/' + searchTerm}
+  let config = {method: 'get', url: 'https://surveyapp-6nn5.onrender.com/userexist/' + searchTerm}
   let reply
   //call api amd save result to variable
   axios(config)

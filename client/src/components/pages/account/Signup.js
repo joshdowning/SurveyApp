@@ -24,7 +24,7 @@ const Signup = ({handleSnackbarOpen, handleClose}) => {
 
     const search = user => {
         //configure endpoint info
-        let config = {method: 'get', url: '/userexist/' + user}
+        let config = {method: 'get', url: 'https://surveyapp-6nn5.onrender.com/userexist/' + user}
         console.log("searching")
 
         axios(config)
@@ -54,7 +54,7 @@ const Signup = ({handleSnackbarOpen, handleClose}) => {
                 alert("user exist")
             } else {
                 let accountInfo = {username: userName, email: email, password: password}
-                axios.post("/addUser", accountInfo)
+                axios.post("https://surveyapp-6nn5.onrender.com/addUser", accountInfo)
 
                 handleSnackbarOpen("signup", userName)
                 handleClose();

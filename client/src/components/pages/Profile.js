@@ -49,7 +49,7 @@ const Profile = () => {
   let loggedInUser = sessionStorage.getItem("logged_in_user")
 
   useEffect(() => {
-    let config = {method: 'get', url: '/search/' + username + "-" + "username"}
+    let config = {method: 'get', url: 'https://surveyapp-6nn5.onrender.com/search/' + username + "-" + "username"}
     let reply
     axios(config)
     .then(function (response) {
@@ -71,7 +71,7 @@ if (isLoading) {
 
 const updateActiveStatus = (survey_id) => {
   //configure endpoint info
-  let config = {method: 'patch', url: '/active/' + survey_id + "-false"}
+  let config = {method: 'patch', url: 'https://surveyapp-6nn5.onrender.com/active/' + survey_id + "-false"}
   let reply
   axios(config)
   .then(function () {

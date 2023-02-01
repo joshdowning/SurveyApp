@@ -20,7 +20,7 @@ const Login = ({handleSnackbarOpen, handleClose}) => {
     const handleSubmit = e => {
         e.preventDefault();
         if (Object.keys((errors)).length === 0) {
-            axios.get("/userAuth/" + userName + "-" + password).then(response => {
+            axios.get("https://surveyapp-6nn5.onrender.com/userAuth/" + userName + "-" + password).then(response => {
                 if (response.data.response === "Approved") {
 
                     handleSnackbarOpen("login", userName)

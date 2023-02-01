@@ -21,7 +21,7 @@ const Survey = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        let config = {method: 'get', url: '/search/' + id + "-id"}
+        let config = {method: 'get', url: 'https://surveyapp-6nn5.onrender.com/search/' + id + "-id"}
         let reply
         //call api amd save result to variable
         axios(config)
@@ -78,7 +78,7 @@ const Survey = () => {
             obj["username"] = user
         })
 
-        const res = await axios.post("/addResponses", survey)
+        const res = await axios.post("https://surveyapp-6nn5.onrender.com/addResponses", survey)
         document.location.href="/surveyconfirmation-completed"
     }
     
