@@ -44,7 +44,7 @@ const LoginPage = () => {
             <Grid container spacing={2} alignItems='center' justifyContent='center'>
                 <Grid item>
                     <Typography variant='h5'style={{opacity: 1, color: "#1a237e", marginBottom: 10, fontWeight: 700, fontFamily: "Segoe UI"}}>
-                        Welcome to Mini Survey-Monkey
+                        Google Forms Replica
                     </Typography>
                     <Typography elevation={4} style={{opacity: 1, fontFamily: 'Segoe UI', fontWeight: 500}} variant='h7'>
                         Please sign in or make an account to begin creating, and exploring surveys!

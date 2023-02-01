@@ -26,7 +26,7 @@ const ResponsiveAppBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [userExists, setUserExists] = useState(false);
   const [open, setOpen] = useState(false);
-  const pages = ['About', 'Pricing', 'Surveys']
+  const pages = ['About', 'Surveys']
   const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
   const handleClickOpen = () => {
@@ -137,7 +137,7 @@ const Search = () => {
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
         
           >
-            Mini Survey Monkey
+            Google Forms Replica
           </Typography>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -169,9 +169,6 @@ const Search = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-                  <MenuItem  style={{color: 'black'}} onClick={()=>{document.location.href = "/pricing"}}>
-                    <Typography style={{fontColor: 'black'}} textAlign="center">Pricing</Typography>
-                  </MenuItem>
                   <MenuItem  style={{color: 'black'}}  onClick={()=>{document.location.href = "/about"}}>
                     <Typography style={{fontColor: 'black'}} textAlign="center">About</Typography>
                   </MenuItem>

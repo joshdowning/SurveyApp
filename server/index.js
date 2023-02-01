@@ -46,8 +46,8 @@ app.post("/addResponses", async (req, res) => {
 async function getResponses() {
   try {
     await client.connect();
-    const database = await client.db('test_surveys');
-    const surveys = await database.collection('survey_responses')
+    const database =  client.db('test_surveys');
+    const surveys =  database.collection('survey_responses')
     const survey = await surveys.find({}).toArray();
     return survey
   } finally {
@@ -91,8 +91,8 @@ async function search(search, type) {
 async function getSurveys(user) {
   try {
     await client.connect();
-    const database = await client.db('test_surveys');
-    const surveys = await database.collection('surveys')
+    const database =  client.db('test_surveys');
+    const surveys =  database.collection('surveys')
     const survey = await surveys.find({ $or: [ { private: false }, { username: user } ] }).toArray();
     return survey
 
@@ -105,8 +105,8 @@ async function getSurveys(user) {
 async function authUser(uName, pWord) {
   try {
     await client.connect();
-    const database = await client.db('Users');
-    const users = await database.collection('Users')
+    const database =  client.db('Users');
+    const users =  database.collection('Users')
 
 
     const user = await users.find({
@@ -189,8 +189,8 @@ app.patch("/active/:id-:active", async (req, res) => {
 async function checkUserExists(username) {
   try {
     await client.connect();
-    const database = await client.db('Users');
-    const users = await database.collection('Users')
+    const database =  client.db('Users');
+    const users =  database.collection('Users')
 
     const user = await users.find({
       username: username
@@ -227,7 +227,7 @@ app.post("/addSurvey", async (req, res) => {
 
 // POST new users to database
 app.post("/addUser", async (req, res) => {
-  await MongoClient.connect(uri, async function (err, db) {
+   MongoClient.connect(uri, async function (err, db) {
     if (err)
       throw err;
     var dbo = db.db("Users");
@@ -235,7 +235,7 @@ app.post("/addUser", async (req, res) => {
     let hash = bcrypt.hashSync(req.body.password, 10);
     secureUserJSON = { username: req.body.username, email: req.body.email, password: hash }
 
-    await dbo.collection("Users").insertOne(secureUserJSON,
+     dbo.collection("Users").insertOne(secureUserJSON,
       function (err, result) {
         if (err)
           throw err;
