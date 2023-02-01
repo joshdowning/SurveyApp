@@ -6,6 +6,8 @@ const port = process.env.PORT || 3001;
 const publicPath = path.join(__dirname, '..', 'public');
 const bodyParser = require("body-parser");
 const bcrypt = require('bcrypt');
+const cors = require('cors');
+
 
 
 // Have Node serve the files for our built React app
@@ -15,6 +17,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.use(cors({origin: 'https://googleformsreplica.onrender.com'}))
 
 // const { MongoClient } = require("mongodb");
 const MongoClient = require('mongodb').MongoClient;
